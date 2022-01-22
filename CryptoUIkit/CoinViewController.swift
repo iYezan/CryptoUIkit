@@ -35,7 +35,7 @@ class CoinViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print(coins)
                 
             case .failure(let error):
-               print("")
+               print("") //
             }
         }
     }
