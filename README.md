@@ -12,4 +12,4 @@ Dark mode support
 ## How to build
 Clone the repository
 
-$ git clone https://github.com/dawidbazan/Cryptofolio.git
+$ git clone https://github.com/iYezan/CryptoUIkit
