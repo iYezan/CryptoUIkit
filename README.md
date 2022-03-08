@@ -5,8 +5,8 @@
 
 ## Features
 
-- Auto layout
 - MVC architectural pattern
+- Auto layout
 - Integration with Coingecko API
 - Dark mode support
 
