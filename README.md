@@ -2,7 +2,7 @@
 
 ## Features
 
-- Swift 5
+- Auto layout
 - MVC architectural pattern
 - Integration with Coingecko API
 - Dark mode support
