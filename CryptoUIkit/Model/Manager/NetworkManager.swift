@@ -8,12 +8,14 @@
 import Foundation
 
 class NetworkManager {
+    
     static let shared  = NetworkManager()
-    let baseURL        = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h"
+    
+    let baseURL  = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h"
     
     private init() {}
     
-    func getCoins(completed: @escaping (Result<[CoinData], CError>) -> Void) {
+    func getCoins(completed: @escaping (Result<[Coin], CError>) -> Void) {
         guard let url = URL(string: baseURL) else {
             completed(.failure(.invalidData))
             return
@@ -22,6 +24,7 @@ class NetworkManager {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let _ = error {
                 completed(.failure(.unableToComplete))
+             
             }
             
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
@@ -31,12 +34,13 @@ class NetworkManager {
             
             guard let data = data else {
                 completed(.failure(.invalidData))
+
                 return
             }
             
             do {
                 let decoder = JSONDecoder()
-                let decodedResponse = try decoder.decode([CoinData].self, from: data)
+                let decodedResponse = try decoder.decode([Coin].self, from: data)
                 completed(.success(decodedResponse))
                 
             } catch {

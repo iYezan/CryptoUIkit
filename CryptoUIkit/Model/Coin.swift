@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CoinData: Decodable {
+struct Coin: Decodable {
     let id: String
     let name: String
     let currentPrice: Double
@@ -31,5 +31,4 @@ struct CoinData: Decodable {
 //                           Coin(name: "CEL",
 //                                price: 10)
 //    ]
-//
 //}
