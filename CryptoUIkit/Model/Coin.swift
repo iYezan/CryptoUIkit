@@ -18,6 +18,7 @@ struct Coin: Decodable {
     }
 }
 
+
 //struct Coin  {
 //    let name: String
 //    let price: Double
