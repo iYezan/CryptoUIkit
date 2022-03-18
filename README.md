@@ -6,7 +6,7 @@
 ## Features
 
 - MVC architectural pattern
-- Auto layout
+- Programmatic views
 - Integration with Coingecko API
 - Dark mode support
 
