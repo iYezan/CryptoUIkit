@@ -15,4 +15,4 @@
 ## How to build
 Clone the repository
 
-```$ git clone https://github.com/iYezan/CryptoUIkit```
+```$ git clone https://github.com/iYezan/CryptoUIkit.git```
